@@ -1,0 +1,24 @@
+rotas:{
+ Recurso - são os caminhos a serem seguidos apos a /
+ EX: localhost/users - users é um recurso de localhost
+}
+
+METODO HTTP
+ Get: buscar uma informação do back-end, o Browse por padrão busca o metodo get da aplicação
+ POST: Criar uma informação no back-end
+ PUT: Alterar uma informação no back-end
+ Delete : Deletar uma informação no back-end
+
+Tipos de parâmetros:
+
+ Query : Parâmetros nomeados enviados na rota após "?" (Filtro, Paginação)
+ EX: localhost/users?nome=Isaac     ||     localhost/users?page=2&nome=Isaac&idade=19
+
+ Route Params : São parâmentros ultilizados para identificar recursos
+ Ex:localhost/users/:id que é na pratica EX: localhost/users/1 esse 1 seria então o id.
+
+ Request Body : Corpo da Requisição, ultilizado para criar  ou alterar recursos
+
+banco de dados
+ O banco de dados que será ultilizado é o sqlite, que é um sql mais ele é "execultavel"
+ Knex: Knex é um SQL query builder para o node; 
