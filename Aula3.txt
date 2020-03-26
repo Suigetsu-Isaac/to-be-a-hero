@@ -1,0 +1,12 @@
+JSX (JavaScript XML)
+- XHtml dentro do javascript
+Componentes
+ - são como tags só que dentro do JSX, funciona como se fosse uma função, isto é, dividindo para conquistar,
+para se criar um componente é preciso isolar aquela parte especificar do codigo, se tal parte se repetir no codigo
+ou se for possivel isolalo sem interferir muito no codigo é viavel transforma-lo em um componente
+
+Estado
+No React as mudancas dos valores das variaveis não interfere na interface para fazer isso é necessário o uso do useState
+
+Imutabilidade
+Não é posivel alterar o valor de um estado diretamente, então para contornar isso é necessário sobrepor por outro
