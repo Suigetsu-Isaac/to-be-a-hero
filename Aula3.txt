@@ -10,3 +10,8 @@ No React as mudancas dos valores das variaveis não interfere na interface para 
 
 Imutabilidade
 Não é posivel alterar o valor de um estado diretamente, então para contornar isso é necessário sobrepor por outro
+
+
+useState
+  Ele sempre retornarar dois valores em um array, um com o seu valor e o outro para alterar-lo(set);
+  É sensato ultilzar o useState para cada input
