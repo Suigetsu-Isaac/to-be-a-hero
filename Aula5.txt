@@ -1,0 +1,12 @@
+Validação
+ A validação é a forma que temos para saber se a informação entrege está sendo conforme o esperado
+
+Teste
+ TDD(test-driven-development) é uma metodologia para teste que visa, a criação de teste de aplicação antes de ser desenvolvidas
+para que esses teste sirvam como um guia para saber quando a tal funcionalidade está finalizada e como consequencia já serve
+como o teste que ela precisa ter,
+
+teste de integração
+Ele testa uma funcionalidade da aplicação
+teste unitário
+Ele testa uma parte da funcionalidade da aplicação de forma isolada 
