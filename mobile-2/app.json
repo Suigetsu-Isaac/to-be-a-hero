@@ -29,6 +29,7 @@
     "android": {
       "package": "com.Suiguetsu.bethehero",
       "versionCode": 1
-    }
+    },
+    "description": ""
   }
 }
