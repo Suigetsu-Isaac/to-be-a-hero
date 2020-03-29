@@ -1,16 +1,13 @@
-const express = require ('express');
+import React from 'react';
 
-const cors = require ('cors');
-const { errors } = require('celebrate');
+import Routes from './routes'
+import './global.css'
+function App() {     
 
-const routes = require ('./routes');
+   return (
+     
+    <Routes />
+  );
+}
 
-const app = express();
-
-app.use(cors());
-
-app.use(express.json());
-app.use(routes);
-app.use(errors());
-
-module.exports = app;
+export default App;

@@ -1,50 +1,20 @@
-const express = require('express');
-const { celebrate, Segments, Joi } = require('celebrate');
+import React from 'react';
 
-const OngsController = require('./Controllers/OngsController');
-const IncidentController = require('./Controllers/IncidentController');
-const ProfileController = require('./Controllers/ProfileController');
-const SessionController = require('./Controllers/SessionController');
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const routes = express.Router();
-
-routes.post('/session',SessionController.create);
-
-//Criando Ongs
-routes.get('/ongs', OngsController.index);
-//Listando Ongs
-
-routes.post('/ongs', celebrate({
-    [Segments.BODY]: Joi.object().keys({
-        name: Joi.string().required(),
-        email: Joi.string().required().email(),
-        whatsapp: Joi.string().required().min(10).max(11),
-        city: Joi.string().required(),
-        uf: Joi.string().required().length(2),
-    })
-}) ,OngsController.create);
-
-
-//Listando Casos(incidents)
-routes.get('/incidents', celebrate({
-    [Segments.QUERY] : Joi.object().keys({
-        page : Joi.number(),
-    }),
-}) ,IncidentController.index);
-//Criando Casos(incidents)
-routes.post('/incidents', IncidentController.create);
-//Deletando Casos(incidents)
-routes.delete('/incidents/:id', celebrate({
-    [Segments.PARAMS]: Joi.object().keys({
-        id: Joi.number().required(),
-    }),
-}) ,IncidentController.delete);
-
-//listando Caso Especifico(profile)
-routes.get('/profile', celebrate({
-    [Segments.HEADERS]:Joi.object({
-        authorization: Joi.string().required(),
-    }).unknown(),
-}) , ProfileController.index);
-
-module.exports = routes;
+import Logon from './pages/Logon'
+import Register from './pages/register'
+import Profile from './pages/profile'
+import NewIncidents from './pages/NewIncidents'
+export default function Routes(){
+    return(
+        <BrowserRouter>
+            <Switch>
+                <Route path='/' exact component= {Logon} />
+                <Route path='/register' component= {Register} />
+                <Route path="/profile" component = { Profile } />
+                <Route path="/incidents/new" component = { NewIncidents } />
+            </Switch>
+        </BrowserRouter>
+    )
+}
